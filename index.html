@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Developer Resume</title>
+<style>
+  :root {
+    --bg: #0a0e14;
+    --bg-alt: #10151f;
+    --accent: #00e5a0;
+    --accent-2: #7c8cff;
+    --text: #d6e0e8;
+    --muted: #7a8899;
+    --border: #1f2733;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container { max-width: 860px; margin: 0 auto; padding: 60px 24px 100px; }
+
+  header.hero {
+    text-align: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+  header.hero .tag {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  header.hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  header.hero p.subtitle {
+    color: var(--muted);
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .links { margin-top: 20px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .links a {
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--text);
+  }
+  .links a:hover { border-color: var(--accent); text-decoration: none; color: var(--accent); }
+
+  section { margin-bottom: 40px; }
+  section h2 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  section h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .card .role-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .card h3 { font-size: 17px; color: var(--text); }
+  .card .company { color: var(--accent); font-size: 14px; }
+  .card .dates { color: var(--muted); font-size: 13px; white-space: nowrap; }
+  .card ul { margin-top: 10px; padding-left: 20px; color: var(--muted); font-size: 14px; }
+  .card ul li { margin-bottom: 6px; }
+
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .skill-pill {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .skill-pill::before { content: "▹ "; color: var(--accent); }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 600px) {
+    header.hero h1 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header class="hero">
+    <span class="tag">Available for work</span>
+    <h1>Your Name</h1>
+    <p class="subtitle">Full-Stack Developer · Placeholder Title</p>
+    <div class="links">
+      <a href="mailto:you@example.com">Email</a>
+      <a href="https://github.com/dumbCodesOnly" target="_blank">GitHub</a>
+      <a href="#" target="_blank">LinkedIn</a>
+      <a href="/resume.pdf" target="_blank">Download Résumé (PDF)</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <div class="card">
+      <p>Placeholder bio — replace this with 2-3 sentences about who you are, what you build, and what you're looking for. Mention your main stack and a standout project or achievement.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="card">
+      <div class="role-row">
+        <h3>Job Title</h3>
+        <span class="dates">Jan 2024 — Present</span>
+      </div>
+      <div class="company">Company Name</div>
+      <ul>
+        <li>Placeholder bullet describing an impactful contribution.</li>
+        <li>Placeholder bullet with a measurable result (e.g. "reduced load time by 40%").</li>
+        <li>Placeholder bullet about a tool or system you built.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="role-row">
+        <h3>Previous Job Title</h3>
+        <span class="dates">Jun 2022 — Dec 2023</span>
+      </div>
+      <div class="company">Previous Company</div>
+      <ul>
+        <li>Placeholder bullet describing responsibilities.</li>
+        <li>Placeholder bullet describing a key project.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="card">
+      <div class="role-row">
+        <h3>Project Name</h3>
+        <a href="#" target="_blank">View →</a>
+      </div>
+      <p style="color: var(--muted); font-size: 14px; margin-top: 8px;">Short description of what the project does and why it's interesting. Mention key tech used.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-pill">JavaScript</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">React</span>
+      <span class="skill-pill">Node.js</span>
+      <span class="skill-pill">SQL</span>
+      <span class="skill-pill">Git</span>
+      <span class="skill-pill">Docker</span>
+      <span class="skill-pill">AWS</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="card">
+      <div class="role-row">
+        <h3>Degree / Program</h3>
+        <span class="dates">Year — Year</span>
+      </div>
+      <div class="company">School Name</div>
+    </div>
+  </section>
+
+  <footer>
+    Built with ⚡ by Your Name · <a href="https://github.com/dumbCodesOnly/dumbCodesOnly">source</a>
+  </footer>
+
+</div>
+</body>
+</html>
