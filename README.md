@@ -47,8 +47,7 @@ what you build, and what you're currently focused on.
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=dumbCodesOnly&show_icons=true&theme=dark&hide_border=true&bg_color=0a0e14&title_color=00e5a0&icon_color=7c8cff&text_color=d6e0e8" width="48%"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dumbCodesOnly&layout=compact&theme=dark&hide_border=true&bg_color=0a0e14&title_color=00e5a0&text_color=d6e0e8" width="38%"/>
+<img src="https://github-readme-stats.vercel.app/api?username=dumbCodesOnly&show_icons=true&theme=dark&hide_border=true&bg_color=0a0e14&title_color=00e5a0&icon_color=7c8cff&text_color=d6e0e8" width="60%"/>
 
 <br/>
 
@@ -62,14 +61,6 @@ what you build, and what you're currently focused on.
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/dumbCodesOnly/profile/main/github-metrics.svg" width="90%"/>
-</div>
-
-<br/>
-
-### 📈 Contribution Graph
-
-<div align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=dumbCodesOnly&theme=react-dark&bg_color=0a0e14&color=00e5a0&line=7c8cff&point=d6e0e8&hide_border=true" width="90%"/>
 </div>
 
 <br/>
