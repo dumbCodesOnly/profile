@@ -63,7 +63,10 @@ what you build, and what you're currently focused on.
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/dumbCodesOnly/profile/main/github-metrics.svg" width="90%"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dumbCodesOnly/profile/main/github-metrics-dark.svg"/>
+  <img src="https://raw.githubusercontent.com/dumbCodesOnly/profile/main/github-metrics.svg" width="90%"/>
+</picture>
 
 </div>
 
