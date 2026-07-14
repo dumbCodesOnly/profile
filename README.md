@@ -8,15 +8,18 @@
 
 <br/>
 
-<picture>
+<a href="https://github.com/dumbCodesOnly"><picture>
   <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/GitHub-dumbCodesOnly-00b386?style=for-the-badge&logo=github&logoColor=0a0e14&labelColor=eef2f5"/>
   <img src="https://img.shields.io/badge/GitHub-dumbCodesOnly-00e5a0?style=for-the-badge&logo=github&logoColor=white&labelColor=0a0e14" alt="GitHub"/>
-</picture>
-<a href="https://github.com/dumbCodesOnly"></a>
-
-[![GitHub](https://img.shields.io/badge/GitHub-dumbCodesOnly-00e5a0?style=for-the-badge&logo=github&logoColor=white&labelColor=0a0e14)](https://github.com/dumbCodesOnly)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-7c8cff?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0a0e14)](https://dumbcodesonly.github.io/dumbCodesOnly-dev/)
-[![Email](https://img.shields.io/badge/Email-Contact-00e5a0?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0a0e14)](mailto:you@example.com)
+</picture></a>
+<a href="https://dumbcodesonly.github.io/dumbCodesOnly-dev/"><picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/Portfolio-Visit-5a6bd6?style=for-the-badge&logo=vercel&logoColor=0a0e14&labelColor=eef2f5"/>
+  <img src="https://img.shields.io/badge/Portfolio-Visit-7c8cff?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0a0e14" alt="Portfolio"/>
+</picture></a>
+<a href="mailto:you@example.com"><picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/Email-Contact-00b386?style=for-the-badge&logo=gmail&logoColor=0a0e14&labelColor=eef2f5"/>
+  <img src="https://img.shields.io/badge/Email-Contact-00e5a0?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0a0e14" alt="Email"/>
+</picture></a>
 
 </div>
 
