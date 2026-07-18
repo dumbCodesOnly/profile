@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0e14,100:10151f&height=200&section=header&text=dumbCodesOnly&fontSize=60&fontColor=00e5a0&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Developer%20%7C%20Building%20things%20that%20work&descAlignY=55&descSize=18&descColor=7c8cff" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0e14,100:10151f&height=200&section=header&text=allocsys&fontSize=60&fontColor=00e5a0&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Developer%20%7C%20Building%20things%20that%20work&descAlignY=55&descSize=18&descColor=7c8cff" width="100%"/>
 
 <br/>
 
@@ -8,11 +8,11 @@
 
 <br/>
 
-<a href="https://github.com/dumbCodesOnly"><picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/GitHub-dumbCodesOnly-00b386?style=for-the-badge&logo=github&logoColor=0a0e14&labelColor=eef2f5"/>
-  <img src="https://img.shields.io/badge/GitHub-dumbCodesOnly-00e5a0?style=for-the-badge&logo=github&logoColor=white&labelColor=0a0e14" alt="GitHub"/>
+<a href="https://github.com/allocsys"><picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/GitHub-allocsys-00b386?style=for-the-badge&logo=github&logoColor=0a0e14&labelColor=eef2f5"/>
+  <img src="https://img.shields.io/badge/GitHub-allocsys-00e5a0?style=for-the-badge&logo=github&logoColor=white&labelColor=0a0e14" alt="GitHub"/>
 </picture></a>
-<a href="https://dumbcodesonly.github.io/profile/"><picture>
+<a href="https://allocsys.github.io/profile/"><picture>
   <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/Portfolio-Visit-5a6bd6?style=for-the-badge&logo=vercel&logoColor=0a0e14&labelColor=eef2f5"/>
   <img src="https://img.shields.io/badge/Portfolio-Visit-7c8cff?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0a0e14" alt="Portfolio"/>
 </picture></a>
@@ -60,15 +60,15 @@ Full-Stack Developer · Building things that work
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=dumbCodesOnly&theme=default&hide_border=true&ring=00b386&fire=5a6bd6&currStreakLabel=00b386"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=dumbCodesOnly&theme=dark&hide_border=true&background=0a0e14&ring=00e5a0&fire=7c8cff&currStreakLabel=00e5a0" width="60%"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=allocsys&theme=default&hide_border=true&ring=00b386&fire=5a6bd6&currStreakLabel=00b386"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=allocsys&theme=dark&hide_border=true&background=0a0e14&ring=00e5a0&fire=7c8cff&currStreakLabel=00e5a0" width="60%"/>
 </picture>
 
 <br/>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dumbCodesOnly/profile/main/github-metrics-dark.svg"/>
-  <img src="https://raw.githubusercontent.com/dumbCodesOnly/profile/main/github-metrics.svg" width="90%"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/allocsys/profile/main/github-metrics-dark.svg"/>
+  <img src="https://raw.githubusercontent.com/allocsys/profile/main/github-metrics.svg" width="90%"/>
 </picture>
 
 </div>
@@ -77,7 +77,7 @@ Full-Stack Developer · Building things that work
 
 <div align="center">
 
-![Profile Views](https://komarev.com/ghpvc/?username=dumbCodesOnly&color=00e5a0&style=for-the-badge&label=PROFILE+VIEWS)
+![Profile Views](https://komarev.com/ghpvc/?username=allocsys&color=00e5a0&style=for-the-badge&label=PROFILE+VIEWS)
 
 </div>
 
