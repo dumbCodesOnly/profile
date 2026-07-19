@@ -81,12 +81,4 @@ workflow automation (n8n + LangChain).
 
 <br/>
 
-<div align="center">
-
-![Profile Views](https://komarev.com/ghpvc/?username=allocsys&color=00e5a0&style=for-the-badge&label=PROFILE+VIEWS)
-
-</div>
-
-<br/>
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:10151f,100:0a0e14&height=100&section=footer" width="100%"/>
