@@ -223,6 +223,32 @@
     border-radius: 4px;
   }
 
+  .contrib summary {
+    cursor: pointer;
+    list-style: none;
+  }
+  .contrib summary::-webkit-details-marker { display: none; }
+  .contrib summary:focus-visible {
+    outline: 2px solid var(--accent-2);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+  .contrib summary .role-row { align-items: center; }
+  .contrib .chevron {
+    font-family: var(--font-mono);
+    color: var(--accent-2);
+    display: inline-block;
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+  }
+  .contrib[open] .chevron { transform: rotate(90deg); }
+  .contrib .contrib-body {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .contrib:not([open]):hover { border-left-color: var(--accent); }
+
   .metrics-card img, .metrics-card picture { display: block; }
 
   footer {
@@ -380,86 +406,102 @@
   <section>
     <h2><span class="cmt">//</span> Open Source Contributions</h2>
 
-    <div class="card">
-      <div class="role-row">
-        <h3>modelcontextprotocol/typescript-sdk</h3>
-        <span class="dates">PR #2504 · open</span>
+    <details class="card contrib">
+      <summary>
+        <div class="role-row">
+          <h3>modelcontextprotocol/typescript-sdk</h3>
+          <span class="dates">PR #2504 · open<span class="chevron">▸</span></span>
+        </div>
+        <div class="company">Fix falsy-zero requestId bugs in debounce guard and cancellation handling</div>
+      </summary>
+      <div class="contrib-body">
+        <ul>
+          <li>Root-caused two separate falsy-zero bugs where request id <code>0</code> was treated as absent because JS treats <code>0</code> as falsy.</li>
+          <li>Fixed the notification debounce guard so a notification tied to request <code>0</code> is never wrongly coalesced with unrelated notifications.</li>
+          <li>Fixed <code>notifications/cancelled</code> handling so a cancellation for request <code>0</code> no longer gets silently dropped, ensuring the correct abort controller fires.</li>
+          <li>Added regression tests covering both cases and referenced both upstream issues (#2117, #2283) in a single PR.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">MCP</span>
+          <span class="tech-tag">Vitest</span>
+        </div>
+        <div class="tag-row" style="margin-top: 10px;">
+          <a href="https://github.com/modelcontextprotocol/typescript-sdk/pull/2504" target="_blank">View PR →</a>
+        </div>
       </div>
-      <div class="company">Fix falsy-zero requestId bugs in debounce guard and cancellation handling</div>
-      <ul>
-        <li>Root-caused two separate falsy-zero bugs where request id <code>0</code> was treated as absent because JS treats <code>0</code> as falsy.</li>
-        <li>Fixed the notification debounce guard so a notification tied to request <code>0</code> is never wrongly coalesced with unrelated notifications.</li>
-        <li>Fixed <code>notifications/cancelled</code> handling so a cancellation for request <code>0</code> no longer gets silently dropped, ensuring the correct abort controller fires.</li>
-        <li>Added regression tests covering both cases and referenced both upstream issues (#2117, #2283) in a single PR.</li>
-      </ul>
-      <div class="tag-row">
-        <span class="tech-tag">TypeScript</span>
-        <span class="tech-tag">MCP</span>
-        <span class="tech-tag">Vitest</span>
-      </div>
-      <div class="tag-row" style="margin-top: 10px;">
-        <a href="https://github.com/modelcontextprotocol/typescript-sdk/pull/2504" target="_blank">View PR →</a>
-      </div>
-    </div>
+    </details>
 
-    <div class="card">
-      <div class="role-row">
-        <h3>drizzle-team/drizzle-orm</h3>
-        <span class="dates">3 PRs · open</span>
+    <details class="card contrib">
+      <summary>
+        <div class="role-row">
+          <h3>drizzle-team/drizzle-orm</h3>
+          <span class="dates">3 PRs · open<span class="chevron">▸</span></span>
+        </div>
+        <div class="company">Connection-pool leak, type-inference bug, and multi-package schema validation gap</div>
+      </summary>
+      <div class="contrib-body">
+        <ul>
+          <li>Fixed a connection-pool leak in node-postgres transactions: a rejected <code>BEGIN</code> skipped both rollback and release, exhausting the pool under repeated connection drops. Verified against the original repro in both the broken and patched state. (<a href="https://github.com/drizzle-team/drizzle-orm/pull/6032" target="_blank">PR #6032</a>)</li>
+          <li>Root-caused a TypeScript inference bug where <code>refine()</code> callbacks silently typed as <code>any</code> whenever <code>createSchemaFactory</code> omitted a <code>coerce</code> option — traced through nested conditional types to a missing generic default, and corrected the original issue report's scope in the process. (<a href="https://github.com/drizzle-team/drizzle-orm/pull/6031" target="_blank">PR #6031</a>)</li>
+          <li>Added real schema validation for 6 Gel-only column types across all four schema-integration packages (zod/arktype/valibot/typebox), replacing a silent any-type fallback, with tests in each package. (<a href="https://github.com/drizzle-team/drizzle-orm/pull/6033" target="_blank">PR #6033</a>)</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Type-level debugging</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Zod</span>
+        </div>
       </div>
-      <div class="company">Connection-pool leak, type-inference bug, and multi-package schema validation gap</div>
-      <ul>
-        <li>Fixed a connection-pool leak in node-postgres transactions: a rejected <code>BEGIN</code> skipped both rollback and release, exhausting the pool under repeated connection drops. Verified against the original repro in both the broken and patched state. (<a href="https://github.com/drizzle-team/drizzle-orm/pull/6032" target="_blank">PR #6032</a>)</li>
-        <li>Root-caused a TypeScript inference bug where <code>refine()</code> callbacks silently typed as <code>any</code> whenever <code>createSchemaFactory</code> omitted a <code>coerce</code> option — traced through nested conditional types to a missing generic default, and corrected the original issue report's scope in the process. (<a href="https://github.com/drizzle-team/drizzle-orm/pull/6031" target="_blank">PR #6031</a>)</li>
-        <li>Added real schema validation for 6 Gel-only column types across all four schema-integration packages (zod/arktype/valibot/typebox), replacing a silent any-type fallback, with tests in each package. (<a href="https://github.com/drizzle-team/drizzle-orm/pull/6033" target="_blank">PR #6033</a>)</li>
-      </ul>
-      <div class="tag-row">
-        <span class="tech-tag">TypeScript</span>
-        <span class="tech-tag">Type-level debugging</span>
-        <span class="tech-tag">PostgreSQL</span>
-        <span class="tech-tag">Zod</span>
-      </div>
-    </div>
+    </details>
 
-    <div class="card">
-      <div class="role-row">
-        <h3>cloudflare/workers-sdk</h3>
-        <span class="dates">3 PRs · 1 merged, 2 open</span>
+    <details class="card contrib" open>
+      <summary>
+        <div class="role-row">
+          <h3>cloudflare/workers-sdk</h3>
+          <span class="dates">3 PRs · 1 merged, 2 open<span class="chevron">▸</span></span>
+        </div>
+        <div class="company">Windows path-encoding crash, deploy-time validation bug, and local Images binding parity</div>
+      </summary>
+      <div class="contrib-body">
+        <ul>
+          <li>Root-caused a Windows-only startup crash on non-ASCII workspace paths to an HTTP header encoding violation (headers are Latin-1-only), then fixed 5 coordinated call sites across module-fallback and worker-socket handling. Verified with a Windows CI run against a real <code>開発</code>-path repro. (<a href="https://github.com/cloudflare/workers-sdk/pull/14713" target="_blank">PR #14713</a> · merged)</li>
+          <li>Fixed a false "infinite redirect loop" deploy warning in Wrangler that ignored the <code>assets.html_handling</code> config, without weakening real infinite-loop detection. (<a href="https://github.com/cloudflare/workers-sdk/pull/14709" target="_blank">PR #14709</a>)</li>
+          <li>Fixed the local Miniflare Images binding to respect <code>fit</code>/<code>gravity</code>/<code>background</code> transform options, matching production behavior. (<a href="https://github.com/cloudflare/workers-sdk/pull/14714" target="_blank">PR #14714</a>)</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">Cloudflare Workers</span>
+          <span class="tech-tag">Root-cause debugging</span>
+          <span class="tech-tag">Cross-platform CI</span>
+        </div>
       </div>
-      <div class="company">Windows path-encoding crash, deploy-time validation bug, and local Images binding parity</div>
-      <ul>
-        <li>Root-caused a Windows-only startup crash on non-ASCII workspace paths to an HTTP header encoding violation (headers are Latin-1-only), then fixed 5 coordinated call sites across module-fallback and worker-socket handling. Verified with a Windows CI run against a real <code>開発</code>-path repro. (<a href="https://github.com/cloudflare/workers-sdk/pull/14713" target="_blank">PR #14713</a> · merged)</li>
-        <li>Fixed a false "infinite redirect loop" deploy warning in Wrangler that ignored the <code>assets.html_handling</code> config, without weakening real infinite-loop detection. (<a href="https://github.com/cloudflare/workers-sdk/pull/14709" target="_blank">PR #14709</a>)</li>
-        <li>Fixed the local Miniflare Images binding to respect <code>fit</code>/<code>gravity</code>/<code>background</code> transform options, matching production behavior. (<a href="https://github.com/cloudflare/workers-sdk/pull/14714" target="_blank">PR #14714</a>)</li>
-      </ul>
-      <div class="tag-row">
-        <span class="tech-tag">TypeScript</span>
-        <span class="tech-tag">Cloudflare Workers</span>
-        <span class="tech-tag">Root-cause debugging</span>
-        <span class="tech-tag">Cross-platform CI</span>
-      </div>
-    </div>
+    </details>
 
-    <div class="card">
-      <div class="role-row">
-        <h3>urllib3/urllib3</h3>
-        <span class="dates">PR #5121 · closed (superseded)</span>
+    <details class="card contrib">
+      <summary>
+        <div class="role-row">
+          <h3>urllib3/urllib3</h3>
+          <span class="dates">PR #5121 · closed (superseded)<span class="chevron">▸</span></span>
+        </div>
+        <div class="company">Replace deprecated pyOpenSSL X.509 API in the TLS backend</div>
+      </summary>
+      <div class="contrib-body">
+        <ul>
+          <li>Traced a <code>DeprecationWarning</code> to the last remaining call of <code>OpenSSL.crypto.X509.get_subject()</code> in the <code>pyopenssl</code> TLS backend, ahead of its removal.</li>
+          <li>Rewrote it using <code>cryptography</code>'s X.509 API, matching the pattern already used elsewhere in the same file, with new tests covering both a present and missing commonName.</li>
+          <li>Closed in favor of a maintainer's concurrent fix for the same issue — independently arrived at an equivalent solution.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">TLS / OpenSSL</span>
+          <span class="tech-tag">cryptography</span>
+        </div>
+        <div class="tag-row" style="margin-top: 10px;">
+          <a href="https://github.com/urllib3/urllib3/pull/5121" target="_blank">View PR →</a>
+        </div>
       </div>
-      <div class="company">Replace deprecated pyOpenSSL X.509 API in the TLS backend</div>
-      <ul>
-        <li>Traced a <code>DeprecationWarning</code> to the last remaining call of <code>OpenSSL.crypto.X509.get_subject()</code> in the <code>pyopenssl</code> TLS backend, ahead of its removal.</li>
-        <li>Rewrote it using <code>cryptography</code>'s X.509 API, matching the pattern already used elsewhere in the same file, with new tests covering both a present and missing commonName.</li>
-        <li>Closed in favor of a maintainer's concurrent fix for the same issue — independently arrived at an equivalent solution.</li>
-      </ul>
-      <div class="tag-row">
-        <span class="tech-tag">Python</span>
-        <span class="tech-tag">TLS / OpenSSL</span>
-        <span class="tech-tag">cryptography</span>
-      </div>
-      <div class="tag-row" style="margin-top: 10px;">
-        <a href="https://github.com/urllib3/urllib3/pull/5121" target="_blank">View PR →</a>
-      </div>
-    </div>
+    </details>
   </section>
 
   <section>
